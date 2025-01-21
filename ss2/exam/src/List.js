@@ -48,7 +48,7 @@ function StudentList() {
                 </thead>
                 <tbody>
                 {students.map((student, index) => (
-                    <tr key={index}>
+                    <tr key={student.id}>
                         <td>{student.company}</td>
                         <td>{student.contact}</td>
                         <td>{student.country}</td>
