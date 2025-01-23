@@ -3,6 +3,8 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useSnackbar } from "notistack";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
+import {saveInformation} from "../service/FormInformationService";
+import * as formInformationService from "../service/FormInformationService";
 
 function FormInformation() {
     const [information, setInformation] = useState({
@@ -46,7 +48,7 @@ function FormInformation() {
 
     const saveInformation = async (information) => {
         try {
-            console.log("Saving information...", information);
+            await formInformationService.saveInformation(information);
             enqueueSnackbar("Điền thông tin thành công", { variant: "success" });
             navigate("/information");
         } catch (error) {
