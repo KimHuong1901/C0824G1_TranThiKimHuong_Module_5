@@ -76,7 +76,16 @@ function FormInformation() {
                         <ErrorMessage name="passport" component="p" className="error"/>
 
                         <p>Day of birth</p>
-                        <Field name="dob" placeholder="Enter your day of birth"/>
+                        <Field name="dob">
+                            {({ field }) => (
+                                <input
+                                    {...field}
+                                    type="date"
+                                    placeholder="Enter your day of birth"
+                                    className="date-input"
+                                />
+                            )}
+                        </Field>
                         <ErrorMessage name="dob" component="p" className="error"/>
 
                         <p>Gender</p>
