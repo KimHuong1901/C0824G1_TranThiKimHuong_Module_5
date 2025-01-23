@@ -1,0 +1,66 @@
+.error {
+  color: red;
+  font-size: 12px;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 80%;
+}
+
+.form-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inline-fields {
+  display: flex;
+  gap: 20px;
+}
+
+.inline-fields > div {
+  flex: 1;
+}
+
+.address-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form-footer {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
